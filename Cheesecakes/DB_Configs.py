@@ -1,7 +1,7 @@
 
 DRIVER_NAME= "SQL SERVER"
-SERVER_NAME = r"TALONTRAILS\HOLLAND"
-DATABASE_NAME = "PyDB"
+SERVER_NAME = r""
+DATABASE_NAME = ""
 
 conn_string = f"""
         Driver={{{DRIVER_NAME}}};
