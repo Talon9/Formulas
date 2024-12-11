@@ -1,2 +1,3 @@
 *.pyc
-Cheesecakes/DB_Configs.py
+DB_Configs.py
+./DB_Configs.py
