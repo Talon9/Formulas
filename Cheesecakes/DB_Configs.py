@@ -1,7 +1,7 @@
 
 DRIVER_NAME= "SQL SERVER"
 SERVER_NAME = r""
-DATABASE_NAME = ""
+DATABASE_NAME = "" #
 
 conn_string = f"""
         Driver={{{DRIVER_NAME}}};
