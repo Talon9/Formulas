@@ -1,6 +1,6 @@
 import glob
 import Classes.cImportFormula as NF
-import Classes.cImportFormulaLines as IFL
+import Classes.cImportFormulaLines  as IFL
          
 for file in glob.glob(r'H:\FoodData\Cheesecake\*-1.txt'):
     with open (file, 'r') as f:

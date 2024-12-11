@@ -1,7 +1,7 @@
 
 import sys
 import pypyodbc as odbc
-import DB_Configs
+from .. import DB_Configs as DBC
 # import pyodbc as odbc
 
 records = [
@@ -10,7 +10,7 @@ records = [
 ]
 
 try:
-    conn = odbc.connect(DB_Configs.conn_string)
+    conn = odbc.connect(DBC.conn_string)
 except Exception as e:
     print(e)
     print('task is terminated')

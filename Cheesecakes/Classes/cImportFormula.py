@@ -1,8 +1,7 @@
 import sys
 import pypyodbc as odbc
-import DB
-import DB_Configs
-from dataclasses import dataclass, field
+from .. import DB_Configs as DBC
+from dataclasses import dataclass
 
 @dataclass
 class ImportFormula:
@@ -15,7 +14,7 @@ class ImportFormula:
     def get_ImportFormulaID(self):
         result = []
         try:
-            conn = odbc.connect(DB_Configs.conn_string)
+            conn = odbc.connect(DBC.conn_string)
         except Exception as e:
             print(e)
             print('task is terminated')
@@ -43,7 +42,7 @@ class ImportFormula:
     def get_ImportFormula_List():
         result = []
         try:
-            conn = odbc.connect(DB_Configs.conn_string)
+            conn = odbc.connect(DBC.conn_string)
         except Exception as e:
             print(e)
             print('task is terminated')
@@ -66,7 +65,7 @@ class ImportFormula:
 
     def FormulaName_AddUpd(self):
         try:
-            conn = odbc.connect(DB_Configs.conn_string)
+            conn = odbc.connect(DBC.conn_string)
         except Exception as e:
             print(e)
             print('task is terminated')

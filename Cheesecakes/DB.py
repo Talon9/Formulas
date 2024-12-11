@@ -1,12 +1,10 @@
-
 import sys
 import pypyodbc as odbc
-# import pyodbc as odbc
-import DB_Configs as db
+from ... import DB_Configs as DBC
 
 def ExecSql(sql, params):
     try:
-        conn = odbc.connect(db.conn_string)
+        conn = odbc.connect(DBC.conn_string)
     except Exception as e:
         print(e)
         print('task is terminated')
@@ -35,7 +33,7 @@ def ExecSql(sql, params):
 def ExecSql_Int(sql, params):
     res = None
     try:
-        conn = odbc.connect(db.conn_string)
+        conn = odbc.connect(DBC.conn_string)
     except Exception as e:
         print(">>> " + e)
         sys.exit()
