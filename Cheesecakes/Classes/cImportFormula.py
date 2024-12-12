@@ -1,6 +1,6 @@
 import sys
 import pypyodbc as odbc
-from .. import DB_Configs as DBC
+import DB_Config as DBC
 from dataclasses import dataclass
 
 @dataclass

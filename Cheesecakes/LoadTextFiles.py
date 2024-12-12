@@ -17,9 +17,9 @@ for file in glob.glob(r'H:\FoodData\Cheesecake\*-1.txt'):
             if len(newLine)>0:
                 FL = IFL.ImportFormulaLines(importFormulaID=F.importFormulaID, 
                                              lnSeq=i, 
-                                             lnTxt=f_contentline
+                                             lnTxt=newLine
                                              )
-                IFL.ImportFormulaLines.FormulaLines_AddUpd()
+                FL.FormulaLines_AddUpd()
                 print(FL)
                 i=i+1                
             f_contentline = f.readline()

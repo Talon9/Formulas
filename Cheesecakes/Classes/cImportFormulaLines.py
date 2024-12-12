@@ -1,12 +1,12 @@
 import sys
 import pypyodbc as odbc
 import DB   as DB
-from .. import DB_Configs as DBC
+import DB_Config as DBC
 from dataclasses import dataclass, field
 from Classes.cImportType import ImportType
 
 @dataclass
-class ImportFormulaLines:
+class ImportFormulaLines():
     importFormulaID: int
     lnSeq: int
     lnTxt: str
@@ -26,7 +26,9 @@ class ImportFormulaLines:
 
         try:
             cursor.execute('{CALL pr_IFL_AddUpd(?, ?, ?)}', params= [self.importFormulaID, self.lnSeq, self.lnTxt])    
-            result = cursor.fetchone() 
+            #cursor.execute('pr_IFL_AddUpd', params= [self.importFormulaID, self.lnSeq, self.lnTxt])    
+            # result = cursor.fetchone() 
+            result = cursor.fetchall()
         except Exception as e:
             print(e.value)
             print('transaction rolled back')

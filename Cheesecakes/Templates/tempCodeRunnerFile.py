@@ -1,1 +1,1 @@
-from .. import DB_Configs as DBC
+import DB_Config as DBC
